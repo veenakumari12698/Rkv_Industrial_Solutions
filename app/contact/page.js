@@ -1,5 +1,4 @@
 import PhoneField from "../../components/PhoneField";
-
 export default function Contact({ searchParams }) {
     const sent = searchParams?.sent === "1";
     return (
