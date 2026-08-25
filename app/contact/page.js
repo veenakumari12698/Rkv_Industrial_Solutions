@@ -1,13 +1,7 @@
-
-"use client";
-
-import { useSearchParams } from "next/navigation";
 import PhoneField from "../../components/PhoneField";
 
-export default function Contact() {
-    const searchParams = useSearchParams();
-    const sent = searchParams.get("sent") === "1";
-
+export default function Contact({ searchParams }) {
+    const sent = searchParams?.sent === "1";
     return (
         <main>
 
