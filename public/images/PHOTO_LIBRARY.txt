@@ -1,0 +1,7 @@
+RKV Industrial Solutions — photographic image library
+All large content visuals in this build are photographic assets, not generated illustrations or SVG scenes.
+They are stored locally under public/images.
+
+Important: some reference photographs come from third-party websites and have varying licenses.
+Before commercial launch, replace any image whose license has not been cleared with RKV-owned,
+properly licensed stock, Unsplash, Pexels, Wikimedia Commons, or another approved source.

@@ -1,0 +1,7 @@
+RKV Industrial Solutions final updates:
+- Added Graphic Design as the 8th service.
+- Created a separate graphic-design inner service page using a local photographic asset.
+- Replaced the brand mark with a square, bold RKV Industrial Solutions logo.
+- WhatsApp +91 87898 56983 opens in a new browser tab.
+- Footer now shows 7 key services including Internal Audit and Graphic Design.
+- All large content images remain local.

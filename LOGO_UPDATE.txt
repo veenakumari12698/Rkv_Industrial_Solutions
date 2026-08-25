@@ -1,0 +1,5 @@
+Logo update:
+- Header keeps the compact square RKV logo.
+- Footer uses a dedicated wide horizontal lockup designed for the dark footer.
+- Footer company name is bold and high-contrast.
+- Favicon contains only the RKV/gear mark so it remains legible at 16–32px.

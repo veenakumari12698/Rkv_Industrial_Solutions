@@ -1,0 +1,30 @@
+RKV INDUSTRIAL SOLUTIONS — FINAL NEXT.JS
+=======================================
+
+Folder: RKV_Industrial
+
+NO PYTHON
+NO DJANGO
+NO DRF
+
+1. Install Node.js 20 LTS.
+2. Open this folder in VS Code.
+3. Run:
+   npm install
+   npm run dev
+4. Open:
+   http://localhost:3000
+
+Main pages:
+Home / About / Services / Products / Industries / Contact
+
+Admin UI:
+http://localhost:3000/admin/login
+http://localhost:3000/admin/dashboard
+
+Contact:
++91 87898 56983
+Gurugram, India
+Monday – Saturday
+
+Before production, connect /api/contact to a real database/email/CRM and add secure admin authentication.

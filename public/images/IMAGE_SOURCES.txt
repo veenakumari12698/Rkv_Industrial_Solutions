@@ -1,0 +1,2 @@
+All large visual assets in this package are locally bundled raster artwork created for this project; no external image CDN is required at runtime.
+Replace with RKV-owned or properly licensed photography before commercial launch if desired.
