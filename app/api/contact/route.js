@@ -126,21 +126,19 @@ export async function POST(req) {
 
 
         if (error) {
+    console.error("RKV enquiry insert error:", error);
 
-            console.error(
-                "RKV enquiry insert error:",
-                error
-            );
-
-            return Response.json(
-                {
-                    ok: false,
-                    message:
-                        "Unable to save your enquiry. Please try again."
-                },
-                { status: 500 }
-            );
-        }
+    return Response.json(
+        {
+            ok: false,
+            message: error.message,
+            code: error.code,
+            details: error.details,
+            hint: error.hint
+        },
+        { status: 500 }
+    );
+}
 
 
         /* ---------------- SUCCESS ---------------- */
@@ -151,18 +149,15 @@ export async function POST(req) {
         );
 
     } catch (error) {
+    console.error("RKV enquiry error:", error);
 
-        console.error(
-            "RKV enquiry error:",
-            error
-        );
-
-        return Response.json(
-            {
-                ok: false,
-                message: "Unable to submit enquiry."
-            },
-            { status: 400 }
-        );
-    }
+    return Response.json(
+        {
+            ok: false,
+            message: error?.message || "Unknown server error",
+            name: error?.name || "Error"
+        },
+        { status: 500 }
+    );
+}
 }
