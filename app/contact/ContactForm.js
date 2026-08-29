@@ -4,234 +4,239 @@ import { useState } from "react";
 import PhoneField from "../../components/PhoneField";
 
 export default function ContactForm() {
-    const [showSuccess, setShowSuccess] = useState(false);
-    const [error, setError] = useState("");
-    const [loading, setLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-    async function handleSubmit(e) {
-        e.preventDefault();
+  async function handleSubmit(e) {
+    e.preventDefault();
 
-        setLoading(true);
-        setError("");
-        setShowSuccess(false);
+    setLoading(true);
+    setError("");
+    setShowSuccess(false);
 
-        const form = e.currentTarget;
-        const formData = new FormData(form);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-        try {
-            const response = await fetch("/api/contact", {
-                method: "POST",
-                body: formData,
-            });
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: formData,
+      });
 
-            const result = await response.json();
+      const result = await response.json();
 
-            if (!response.ok) {
-                throw new Error(
-                    result.message || "Something went wrong."
-                );
-            }
+      if (!response.ok) {
+        throw new Error(
+          result.message || "Something went wrong."
+        );
+      }
 
-            form.reset();
-            setShowSuccess(true);
-
-        } catch (err) {
-            setError(
-                err.message || "Unable to submit enquiry."
-            );
-        } finally {
-            setLoading(false);
-        }
+      form.reset();
+      setShowSuccess(true);
+    } catch (err) {
+      setError(
+        err.message || "Unable to submit enquiry."
+      );
+    } finally {
+      setLoading(false);
     }
+  }
 
-    return (
-        <>
-            {/* FORM */}
-            <form
-                className="proForm"
-                onSubmit={handleSubmit}
+  return (
+    <>
+      <form
+        className="premiumContactForm"
+        onSubmit={handleSubmit}
+      >
+
+        <div className="premiumFormTop">
+          <span>BUSINESS ENQUIRY</span>
+
+          <h2>Tell us what you need.</h2>
+
+          <p>
+            Share your requirement and our team will review
+            the details and get back to you.
+          </p>
+        </div>
+
+        <div className="premiumFormGrid">
+
+          <div className="formField">
+            <label htmlFor="name">Full name *</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your full name"
+              required
+              autoComplete="name"
+            />
+          </div>
+
+          <div className="formField">
+            <label htmlFor="company">Company name</label>
+            <input
+              id="company"
+              name="company"
+              type="text"
+              placeholder="Your company"
+              autoComplete="organization"
+            />
+          </div>
+
+          <div className="formField">
+            <label htmlFor="email">Business email *</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="name@company.com"
+              required
+              autoComplete="email"
+            />
+          </div>
+
+          <div className="formField">
+            <label>Phone number</label>
+            <PhoneField />
+          </div>
+
+          <div className="formField">
+            <label htmlFor="type">Requirement type *</label>
+
+            <select
+              id="type"
+              name="type"
+              defaultValue=""
+              required
             >
+              <option value="" disabled>
+                Select requirement type
+              </option>
 
-                {/* FORM TITLE */}
-                <div className="formTitle">
+              <option value="Service">
+                Service
+              </option>
 
-                    <span>BUSINESS ENQUIRY</span>
+              <option value="Product">
+                Product
+              </option>
 
-                    <h2>
-                        Tell us about your requirement.
-                    </h2>
+              <option value="Industrial project">
+                Industrial Project
+              </option>
 
-                </div>
+              <option value="Audit / Consulting">
+                Audit / Consulting
+              </option>
 
+              <option value="Other">
+                Other
+              </option>
+            </select>
+          </div>
 
-                {/* FORM FIELDS */}
-                <div className="formGrid">
+          <div className="formField">
+            <label htmlFor="subject">Subject</label>
 
-                    {/* NAME */}
-                    <input
-                        name="name"
-                        type="text"
-                        placeholder="Full name *"
-                        required
-                        autoComplete="name"
-                    />
+            <input
+              id="subject"
+              name="subject"
+              type="text"
+              placeholder="What is this regarding?"
+            />
+          </div>
 
+          <div className="formField formFieldFull">
+            <label htmlFor="message">
+              Requirement details *
+            </label>
 
-                    {/* COMPANY */}
-                    <input
-                        name="company"
-                        type="text"
-                        placeholder="Company name"
-                        autoComplete="organization"
-                    />
+            <textarea
+              id="message"
+              name="message"
+              rows="7"
+              placeholder="Tell us about the specification, part number, quantity, application, project scope or delivery requirement..."
+              required
+            />
+          </div>
 
+        </div>
 
-                    {/* EMAIL */}
-                    <input
-                        name="email"
-                        type="email"
-                        placeholder="Business email *"
-                        required
-                        autoComplete="email"
-                    />
+        <div className="premiumFormBottom">
 
+          <button
+            className="premiumSubmit"
+            type="submit"
+            disabled={loading}
+          >
+            {loading ? "Sending..." : "Send Enquiry"}
+            <span>↗</span>
+          </button>
 
-                    {/* PHONE */}
-                    <PhoneField />
+          <small>
+            Your information is used only to respond to your
+            business enquiry.
+          </small>
 
+        </div>
 
-                    {/* REQUIREMENT TYPE */}
-                    <select
-                        name="type"
-                        defaultValue=""
-                        required
-                    >
-                        <option value="" disabled>
-                            Requirement type *
-                        </option>
+      </form>
 
-                        <option value="Service">
-                            Service
-                        </option>
+      {/* SUCCESS */}
+      {showSuccess && (
+        <div className="formModalOverlay">
+          <div className="formModal">
 
-                        <option value="Product">
-                            Product
-                        </option>
+            <div className="modalCheck">✓</div>
 
-                        <option value="Industrial project">
-                            Industrial Project
-                        </option>
+            <span>THANK YOU</span>
 
-                        <option value="Audit / Consulting">
-                            Audit / Consulting
-                        </option>
+            <h2>Enquiry received.</h2>
 
-                        <option value="Other">
-                            Other
-                        </option>
-                    </select>
+            <p>
+              Your requirement has been successfully submitted.
+              Our team will review the details and get back to you.
+            </p>
 
+            <button
+              type="button"
+              className="premiumSubmit"
+              onClick={() => setShowSuccess(false)}
+            >
+              Continue
+            </button>
 
-                    {/* SUBJECT */}
-                    <input
-                        name="subject"
-                        type="text"
-                        placeholder="Subject"
-                    />
+          </div>
+        </div>
+      )}
 
+      {/* ERROR */}
+      {error && (
+        <div className="formModalOverlay">
+          <div className="formModal">
 
-                    {/* MESSAGE */}
-                    <textarea
-                        name="message"
-                        rows="7"
-                        placeholder="Describe your requirement, specification, quantity or project scope *"
-                        required
-                    ></textarea>
+            <div className="modalError">!</div>
 
-                </div>
+            <span>PLEASE TRY AGAIN</span>
 
+            <h2>We couldn't submit this.</h2>
 
-                {/* SUBMIT */}
-                <button
-                    className="btn btn-orange"
-                    type="submit"
-                    disabled={loading}
-                >
-                    {loading
-                        ? "Sending..."
-                        : "Send Enquiry →"
-                    }
-                </button>
+            <p>{error}</p>
 
+            <button
+              type="button"
+              className="premiumSubmit"
+              onClick={() => setError("")}
+            >
+              Close
+            </button>
 
-                <small>
-                    We use your details only to respond to your
-                    business enquiry.
-                </small>
-
-            </form>
-
-
-            {/* SUCCESS POPUP */}
-            {showSuccess && (
-                <div className="successOverlay">
-                    <div className="successPopup">
-
-                        <div className="successIcon">
-                            ✓
-                        </div>
-
-                        <h2>
-                            Enquiry Submitted!
-                        </h2>
-
-                        <p>
-                            Your requirement has been securely
-                            submitted. Our team will review it
-                            and get back to you.
-                        </p>
-
-                        <button
-                            type="button"
-                            className="btn btn-orange"
-                            onClick={() => setShowSuccess(false)}
-                        >
-                            OK
-                        </button>
-
-                    </div>
-                </div>
-            )}
-
-
-            {/* ERROR POPUP */}
-            {error && (
-                <div className="successOverlay">
-                    <div className="successPopup">
-
-                        <div className="errorIcon">
-                            !
-                        </div>
-
-                        <h2>
-                            Submission Failed
-                        </h2>
-
-                        <p>
-                            {error}
-                        </p>
-
-                        <button
-                            type="button"
-                            className="btn btn-orange"
-                            onClick={() => setError("")}
-                        >
-                            OK
-                        </button>
-
-                    </div>
-                </div>
-            )}
-        </>
-    );
+          </div>
+        </div>
+      )}
+    </>
+  );
 }
