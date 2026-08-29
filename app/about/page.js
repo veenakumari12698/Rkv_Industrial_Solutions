@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "About RKV Industrial Solutions | Industrial Procurement Partner",
   description:
-    "RKV Industrial Solutions provides industrial sourcing, MRO supply, CAPEX material supply, procurement consulting, audits and operational support for businesses.",
+    "Learn about RKV Industrial Solutions, an industrial procurement partner providing MRO sourcing, CAPEX material supply, procurement consulting, audits and operational support.",
   alternates: {
     canonical: "https://www.rkvindustrialsolutions.com/about",
   },

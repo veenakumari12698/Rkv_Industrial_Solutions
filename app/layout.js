@@ -6,51 +6,56 @@ export const metadata = {
   metadataBase: new URL('https://www.rkvindustrialsolutions.com'),
 
   title: {
-    default: 'RKV Industrial Solutions | Industrial Sourcing & Procurement',
+    default: 'RKV Industrial Solutions | Industrial Procurement & MRO Supply',
     template: '%s | RKV Industrial Solutions',
   },
 
   description:
-    'RKV Industrial Solutions provides industrial sourcing, MRO products, CAPEX material supply, procurement consulting, and reliable industrial support across India.',
+    'RKV Industrial Solutions provides MRO global sourcing, CAPEX industrial material supply, procurement consulting, audits and industrial support.',
 
   keywords: [
-    'industrial sourcing',
+    'RKV Industrial Solutions',
+    'RKV',
     'industrial procurement',
-    'MRO products',
     'MRO sourcing',
+    'MRO global sourcing',
     'CAPEX material supply',
-    'industrial material supplier',
-    'industrial suppliers India',
-    'procurement services India',
-    'industrial sourcing India',
+    'industrial material supply',
     'procurement consulting',
+    'industrial sourcing',
+    'industrial products',
   ],
 
-  authors: [
-    {
-      name: 'RKV Industrial Solutions',
-    },
-  ],
-
-  creator: 'RKV Industrial Solutions',
+  alternates: {
+    canonical: '/',
+  },
 
   robots: {
     index: true,
     follow: true,
-  },
-
-  alternates: {
-    canonical: 'https://www.rkvindustrialsolutions.com/',
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 
   openGraph: {
-    title: 'RKV Industrial Solutions | Industrial Sourcing & Procurement',
+    title:
+      'RKV Industrial Solutions | Industrial Procurement & MRO Supply',
     description:
-      'Industrial sourcing, MRO products, CAPEX material supply, procurement consulting, and industrial support across India.',
+      'Industrial procurement, MRO sourcing, CAPEX material supply and procurement support from RKV Industrial Solutions.',
     url: 'https://www.rkvindustrialsolutions.com/',
     siteName: 'RKV Industrial Solutions',
-    locale: 'en_IN',
     type: 'website',
+    locale: 'en_IN',
+    images: [
+      {
+        url: '/images/hero.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'RKV Industrial Solutions',
+      },
+    ],
   },
 
   icons: {
@@ -67,13 +72,33 @@ export const metadata = {
   },
 };
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'RKV Industrial Solutions',
+  alternateName: 'RKV',
+  url: 'https://www.rkvindustrialsolutions.com',
+  logo: 'https://www.rkvindustrialsolutions.com/brand/favicon.png',
+  description:
+    'RKV Industrial Solutions provides industrial procurement, MRO global sourcing, CAPEX material supply, procurement consulting and industrial support.',
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
         <Header />
+
         {children}
+
         <Footer />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
       </body>
     </html>
   );
