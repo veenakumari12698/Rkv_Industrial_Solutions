@@ -47,11 +47,17 @@ export default function sitemap() {
     '/terms',
   ];
 
-  const servicePages = services.map((slug) => `/services/${slug}`);
+  const servicePages = services.map(
+    (slug) => `/services/${slug}`
+  );
 
-  const industryPages = industries.map((slug) => `/industries/${slug}`);
+  const industryPages = industries.map(
+    (slug) => `/industries/${slug}`
+  );
 
-  const productPages = products.map((slug) => `/products/${slug}`);
+  const productPages = products.map(
+    (slug) => `/products/${slug}`
+  );
 
   const allPages = [
     ...mainPages,
