@@ -1,6 +1,6 @@
-import PhoneField from "../../components/PhoneField";
-export default function Contact({ searchParams }) {
-    const sent = searchParams?.sent === "1";
+import ContactForm from "./ContactForm";
+
+export default function Contact() {
     return (
         <main>
 
@@ -20,7 +20,6 @@ export default function Contact({ searchParams }) {
                     </p>
                 </div>
             </section>
-
 
             {/* CONTACT SECTION */}
             <section className="section">
@@ -43,7 +42,6 @@ export default function Contact({ searchParams }) {
                             your requirement directly.
                         </p>
 
-
                         <div className="contactCards">
 
                             <div>
@@ -54,6 +52,13 @@ export default function Contact({ searchParams }) {
                             <div>
                                 <span>OFFICE</span>
                                 <b>Monday – Saturday</b>
+                            </div>
+
+                            <div>
+                                <span>Email</span>
+                                <a href="mailto:info@rkvindustrialsolutions.com">
+                                    info@rkvindustrialsolutions.com
+                                </a>
                             </div>
 
                             <div>
@@ -70,7 +75,6 @@ export default function Contact({ searchParams }) {
 
                         </div>
 
-
                         {/* WHATSAPP BUTTON */}
                         <a
                             className="waButton"
@@ -84,137 +88,8 @@ export default function Contact({ searchParams }) {
 
                     </div>
 
-
                     {/* FORM */}
-                    <form
-                        className="proForm"
-                        action="/api/contact"
-                        method="post"
-                    >
-
-                        <div className="formTitle">
-
-                            <span>BUSINESS ENQUIRY</span>
-
-                            <h2>
-                                {sent
-                                    ? "Thank you. Your enquiry is with RKV."
-                                    : "Tell us about your requirement."
-                                }
-                            </h2>
-
-                            {sent && (
-                                <p className="formSuccess">
-                                    Your requirement has been securely submitted.
-                                    Our team will review it and get back to you.
-                                </p>
-                            )}
-
-                        </div>
-
-
-                        <div className="formGrid">
-
-                            {/* NAME */}
-                            <input
-                                name="name"
-                                type="text"
-                                placeholder="Full name *"
-                                required
-                                autoComplete="name"
-                            />
-
-
-                            {/* COMPANY */}
-                            <input
-                                name="company"
-                                type="text"
-                                placeholder="Company name"
-                                autoComplete="organization"
-                            />
-
-
-                            {/* EMAIL */}
-                            <input
-                                name="email"
-                                type="email"
-                                placeholder="Business email *"
-                                required
-                                autoComplete="email"
-                            />
-
-
-                            {/* PHONE */}
-                            <PhoneField />
-
-
-                            {/* REQUIREMENT TYPE */}
-                            <select
-                                name="type"
-                                defaultValue=""
-                                required
-                            >
-                                <option value="" disabled>
-                                    Requirement type *
-                                </option>
-
-                                <option value="Service">
-                                    Service
-                                </option>
-
-                                <option value="Product">
-                                    Product
-                                </option>
-
-                                <option value="Industrial project">
-                                    Industrial Project
-                                </option>
-
-                                <option value="Audit / Consulting">
-                                    Audit / Consulting
-                                </option>
-
-                                <option value="Other">
-                                    Other
-                                </option>
-
-                            </select>
-
-
-                            {/* SUBJECT */}
-                            <input
-                                name="subject"
-                                type="text"
-                                placeholder="Subject"
-                            />
-
-
-                            {/* MESSAGE */}
-                            <textarea
-                                name="message"
-                                rows="7"
-                                placeholder="Describe your requirement, specification, quantity or project scope *"
-                                required
-                            ></textarea>
-
-                        </div>
-
-
-                        {/* SUBMIT */}
-                        <button
-                            className="btn btn-orange"
-                            type="submit"
-                        >
-                            Send Enquiry →
-                        </button>
-
-
-                        <small>
-                            We use your details only to respond to your
-                            business enquiry.
-                        </small>
-
-                    </form>
+                    <ContactForm />
 
                 </div>
             </section>

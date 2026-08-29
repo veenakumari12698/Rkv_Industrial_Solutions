@@ -143,10 +143,10 @@ export async function POST(req) {
 
         /* ---------------- SUCCESS ---------------- */
 
-        return Response.redirect(
-            new URL("/contact?sent=1", req.url),
-            303
-        );
+     return Response.json({
+    ok: true,
+    message: "Your enquiry has been submitted successfully."
+});
 
     } catch (error) {
     console.error("RKV enquiry error:", error);

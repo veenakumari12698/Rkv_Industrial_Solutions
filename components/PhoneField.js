@@ -106,7 +106,7 @@ export default function PhoneField() {
                     value={phone}
                     onChange={handlePhoneChange}
                     onBlur={validatePhone}
-                    placeholder="Phone / WhatsApp *"
+                    placeholder="Contact number*"
                     required
                     inputMode="numeric"
                     autoComplete="tel"
