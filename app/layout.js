@@ -16,6 +16,7 @@ export const metadata = {
   keywords: [
     'RKV Industrial Solutions',
     'RKV',
+
     'industrial procurement',
     'MRO sourcing',
     'MRO global sourcing',

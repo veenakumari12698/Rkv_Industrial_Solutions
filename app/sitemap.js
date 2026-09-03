@@ -9,6 +9,9 @@ const services = [
   'internal-audit',
   'digital-marketing',
   'graphic-design',
+  'mechanical-design-3d-cad-service',
+  'all-mechanical-work',
+  'safety-industrial-equipment-supply',
 ];
 
 const industries = [

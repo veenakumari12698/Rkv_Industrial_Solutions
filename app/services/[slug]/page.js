@@ -220,6 +220,90 @@ const data = {
     seoDescription:
       "Professional graphic design for industrial and B2B businesses, including company profiles, brochures, presentations, product catalogues and marketing creatives.",
   },
+
+    "mechanical-design-3d-cad-service": {
+    label: "MECHANICAL DESIGN • 3D CAD SERVICE",
+    title: "Precision mechanical design and 3D CAD support for industrial requirements.",
+    intro:
+      "RKV provides practical mechanical design and 3D CAD support for industrial components, equipment and engineering requirements.",
+    overview:
+      "From concept development and 3D modelling to technical drawings and design modifications, we support engineering requirements with clear and practical design coordination.",
+    scope: [
+      "2D and 3D CAD modelling",
+      "Mechanical component design",
+      "Assembly and part modelling",
+      "Technical drawing preparation",
+      "Design modification and revision",
+      "Engineering documentation support",
+    ],
+    process: ["Understand", "Design", "Model", "Review", "Deliver"],
+    why: [
+      "Clear engineering documentation",
+      "Practical industrial design support",
+      "Accurate 3D modelling",
+      "Flexible design modification",
+    ],
+    seoTitle:
+      "Mechanical Design & 3D CAD Services | RKV Industrial Solutions",
+    seoDescription:
+      "Mechanical design and 3D CAD services for industrial requirements, including 2D and 3D modelling, component design, assemblies and technical drawings.",
+  },
+
+  "all-mechanical-work": {
+    label: "ALL MECHANICAL WORK",
+    title: "Reliable mechanical support for industrial operations.",
+    intro:
+      "RKV provides coordinated mechanical support for fabrication, repair, modification, installation and maintenance requirements.",
+    overview:
+      "We help industrial businesses coordinate practical mechanical work around equipment, machinery and operational requirements, with a focus on execution, quality and timely completion.",
+    scope: [
+      "Mechanical fabrication support",
+      "Equipment repair and modification",
+      "Machine installation support",
+      "Mechanical maintenance",
+      "Fabrication and assembly work",
+      "Spare and component coordination",
+    ],
+    process: ["Assess", "Plan", "Execute", "Inspect", "Close"],
+    why: [
+      "Practical mechanical execution",
+      "Coordinated technical support",
+      "Reduced equipment downtime",
+      "Clear work tracking",
+    ],
+    seoTitle:
+      "Industrial Mechanical Work & Support Services | RKV Industrial Solutions",
+    seoDescription:
+      "Industrial mechanical work including fabrication, equipment repair, modification, installation, maintenance and mechanical support from RKV Industrial Solutions.",
+  },
+
+  "safety-industrial-equipment-supply": {
+    label: "SAFETY & INDUSTRIAL EQUIPMENT SUPPLY",
+    title: "Safety and industrial equipment sourced around your requirement.",
+    intro:
+      "RKV coordinates the sourcing and supply of industrial safety equipment, PPE and essential workplace protection products.",
+    overview:
+      "We help businesses identify and source suitable safety and industrial equipment based on workplace requirements, specifications and quantities.",
+    scope: [
+      "Personal protective equipment (PPE)",
+      "Industrial safety equipment",
+      "Workplace protection products",
+      "Safety footwear and protective clothing",
+      "Industrial tools and equipment",
+      "Requirement-based equipment sourcing",
+    ],
+    process: ["Understand", "Specify", "Source", "Compare", "Supply"],
+    why: [
+      "Requirement-focused sourcing",
+      "Wide industrial supply coordination",
+      "Specification-based selection",
+      "Single coordination point",
+    ],
+    seoTitle:
+      "Safety & Industrial Equipment Supply | RKV Industrial Solutions",
+    seoDescription:
+      "Safety and industrial equipment supply including PPE, workplace protection products, safety footwear, protective clothing and industrial equipment.",
+  },
 };
 
 export function generateStaticParams() {
