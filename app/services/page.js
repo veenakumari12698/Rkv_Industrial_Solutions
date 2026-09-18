@@ -110,6 +110,17 @@ export default function Services() {
           </div>
         </div>
       </section>
+{/* WHATSAPP */}
+      <a
+        className="floatingWhatsApp"
+        href="https://wa.me/918789856983"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with RKV Industrial Solutions on WhatsApp"
+      >
+        <span>◔</span>
+        <b>WhatsApp</b>
+      </a>
     </main>
   );
 }
