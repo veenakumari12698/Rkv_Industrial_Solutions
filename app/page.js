@@ -49,16 +49,16 @@ const services = [
     "internal-audit",
     "Strengthen operational controls, governance and risk visibility.",
   ],
-  [
-    "Digital Marketing",
-    "digital-marketing",
-    "Build a credible B2B digital presence for industrial businesses.",
-  ],
-  [
-    "Graphic Design",
-    "graphic-design",
-    "Professional brand, presentation and visual communication for B2B businesses.",
-  ],
+  //[
+   // "Digital Marketing",
+     //"digital-marketing",
+     //"Build a credible B2B digital presence for industrial businesses.",
+   //],
+   //[
+    // "Graphic Design",
+    // "graphic-design",
+    // "Professional brand, presentation and visual communication for B2B businesses.",
+   //],
 ];
 
 const products = [

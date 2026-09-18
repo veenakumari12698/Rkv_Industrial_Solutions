@@ -31,16 +31,16 @@ const items = [
     "internal-audit",
     "Process, control and risk-focused internal audit support."
   ],
-  [
-    "Digital Marketing",
-    "digital-marketing",
-    "Professional B2B digital presence and lead-oriented marketing."
-  ],
-  [
-    "Graphic Design",
-    "graphic-design",
-    "Professional brand, presentation and visual communication for B2B businesses."
-  ],
+  //[
+   // "Digital Marketing",
+     //"digital-marketing",
+     //"Professional B2B digital presence and lead-oriented marketing."
+   //],
+  //[
+    // "Graphic Design",
+    // "graphic-design",
+    // "Professional brand, presentation and visual communication for B2B businesses."
+   //],
   [
     "Mechanical Design / 3D CAD Service",
     "mechanical-design-3d-cad-service",

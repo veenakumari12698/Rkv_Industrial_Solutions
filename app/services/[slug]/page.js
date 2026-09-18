@@ -166,60 +166,60 @@ const data = {
       "Internal audit support focused on operational processes, controls, documentation, risk visibility, findings and practical improvement actions.",
   },
 
-  "digital-marketing": {
-    label: "DIGITAL MARKETING",
-    title: "Build a credible digital presence for industrial buyers.",
-    intro:
-      "RKV provides B2B digital marketing support designed for industrial, procurement and technical businesses.",
-    overview:
-      "The focus is on professional positioning, useful content, search visibility and lead-oriented digital communication rather than generic social media activity.",
-    scope: [
-      "B2B website content",
-      "Search visibility strategy",
-      "Industrial content creation",
-      "LinkedIn and social campaigns",
-      "Lead-generation landing pages",
-      "Performance reporting",
-    ],
-    process: ["Position", "Plan", "Create", "Publish", "Optimize"],
-    why: [
-      "Professional brand presence",
-      "Industry-relevant content",
-      "Lead-focused campaigns",
-      "Measurable improvement",
-    ],
-    seoTitle: "B2B Digital Marketing Services for Industrial Businesses",
-    seoDescription:
-      "B2B digital marketing services for industrial businesses, including website content, SEO strategy, industrial content, social campaigns and lead generation.",
-  },
+  //"digital-marketing": {
+    //label: "DIGITAL MARKETING",
+    // title: "Build a credible digital presence for industrial buyers.",
+     //intro:
+      // "RKV provides B2B digital marketing support designed for industrial, procurement and technical businesses.",
+     //overview:
+     //  "The focus is on professional positioning, useful content, search visibility and lead-oriented digital communication rather than generic social media activity.",
+     //scope: [
+      // "B2B website content",
+      // "Search visibility strategy",
+      // "Industrial content creation",
+      // "LinkedIn and social campaigns",
+      // "Lead-generation landing pages",
+      // "Performance reporting",
+     //],
+     //process: ["Position", "Plan", "Create", "Publish", "Optimize"],
+     //why: [
+      // "Professional brand presence",
+      // "Industry-relevant content",
+      // "Lead-focused campaigns",
+      // "Measurable improvement",
+     //],
+     //seoTitle: "B2B Digital Marketing Services for Industrial Businesses",
+     //seoDescription:
+       //"B2B digital marketing services for industrial businesses, including website content, SEO strategy, industrial content, social campaigns and lead generation.",
+  //},
 
-  "graphic-design": {
-    label: "GRAPHIC DESIGN",
-    title:
-      "Clear, professional visual communication for industrial brands.",
-    intro:
-      "RKV provides graphic design support for businesses that need consistent, credible and presentation-ready visual communication.",
-    overview:
-      "From company profiles and presentations to marketing creatives and business collateral, we create visual systems that make technical businesses easier to understand and trust.",
-    scope: [
-      "Company profiles & capability decks",
-      "Brochures and product catalogues",
-      "Presentation and proposal design",
-      "Social media creatives",
-      "Business stationery & collateral",
-      "Campaign and event creatives",
-    ],
-    process: ["Understand", "Structure", "Design", "Review", "Deliver"],
-    why: [
-      "Consistent brand presentation",
-      "Business-focused design",
-      "Clear technical communication",
-      "Professional client-facing collateral",
-    ],
-    seoTitle: "Graphic Design Services for B2B Industrial Businesses",
-    seoDescription:
-      "Professional graphic design for industrial and B2B businesses, including company profiles, brochures, presentations, product catalogues and marketing creatives.",
-  },
+   //"graphic-design": {
+    // label: "GRAPHIC DESIGN",
+     //title:
+      // "Clear, professional visual communication for industrial brands.",
+     //intro:
+      // "RKV provides graphic design support for businesses that need consistent, credible and presentation-ready visual communication.",
+     //overview:
+     //  "From company profiles and presentations to marketing creatives and business collateral, we create visual systems that make technical businesses easier to understand and trust.",
+     //scope: [
+       //"Company profiles & capability decks",
+      // "Brochures and product catalogues",
+      // "Presentation and proposal design",
+      // "Social media creatives",
+      // "Business stationery & collateral",
+      // "Campaign and event creatives",
+     //],
+    // process: ["Understand", "Structure", "Design", "Review", "Deliver"],
+     //why: [
+     //  "Consistent brand presentation",
+     //  "Business-focused design",
+     //  "Clear technical communication",
+       //"Professional client-facing collateral",
+    // ],
+     //seoTitle: "Graphic Design Services for B2B Industrial Businesses",
+     //seoDescription:
+     //  "Professional graphic design for industrial and B2B businesses, including company profiles, brochures, presentations, product catalogues and marketing creatives.",
+  // },
 
     "mechanical-design-3d-cad-service": {
     label: "MECHANICAL DESIGN • 3D CAD SERVICE",

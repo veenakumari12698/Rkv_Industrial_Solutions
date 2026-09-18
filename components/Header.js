@@ -10,8 +10,8 @@ const services = [
   ["Installation & Maintenance", "installation-commissioning-maintenance-repair"],
   ["Procurement Audit", "procurement-audit"],
   ["Internal Audit", "internal-audit"],
-  ["Digital Marketing", "digital-marketing"],
-  ["Graphic Design", "graphic-design"],
+  //  ["Digital Marketing", "digital-marketing"],
+ // ["Graphic Design", "graphic-design"],
 
   // NEW SERVICES
   ["Mechanical Design / 3D CAD Service", "mechanical-design-3d-cad-service"],
